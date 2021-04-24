@@ -1,0 +1,174 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Gugi&family=Jua&family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/slide3.PNG) no-repeat center;
+  background-size: cover;
+}
+
+nav a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.navbar {
+  z-index: 11;
+  position: absolute;
+  width: 100%;
+  font-family: 'Gugi', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: none;
+  padding: 17px 12px;
+  align-items: top;
+  justify-content: top;
+  background-color: rgba(0,0,0,.2);
+}
+
+.navbar_logo {
+  display: flex;
+  color: rgb(252, 128, 26);
+  font-size: 33px;
+
+}
+.navbar_logo i {
+  padding-right: 8px;
+  padding-top: 3px;
+}
+
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  margin:0 12vw;
+  font-size: 22px;
+  align-items: center;
+  justify-content: center;
+}
+.navbar_menu li {
+  padding: 11px 2vw;
+}
+.navbar_menu li:hover {
+  background-color: rgb(238, 173, 120);
+  border-radius: 10px;
+}
+
+.navbar_menu li a{
+  transition: all .35s;
+}
+.navbar_menu li a:hover {
+  color: rgb(255, 115, 0);
+  font-size: 30px;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+  transition:all .35s; 
+}
+
+.navbar_link  {
+  display: flex;
+  list-style: none;
+}
+.navbar_link li a{
+  transition: all .35s;
+}
+
+.navbar_link li {
+  padding-right: 15px;
+  font-size: 30px;
+}
+
+.navbar_link .google:hover {
+  color: #9ef9fc;
+  font-size: 40px;
+  transition: all .35s;
+}
+.navbar_link .youtube:hover {
+  color: rgba(240, 65, 65, 0.815);
+  font-size: 40px;
+  transition: all .35s;
+}
+
+.navbar_btn {
+  position:absolute;
+  display: none;
+  right: 2.3vw;
+  font-size: 30px;
+  
+}
+
+@media screen and (max-width: 1100px) {
+  
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 17px 25px;
+  }
+
+  .navbar_logo {
+    display: flex;
+    width: 100%;
+  }
+
+  .navbar_logo i {
+    padding-right: 8px;
+  }
+  
+  .navbar_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+  .navbar_menu.active{
+    padding: 0 3vw; 
+    
+  }
+  .navbar_menu li a:hover {
+    font-size: 40px;
+  }
+  
+  .navbar_menu li {
+    width: 100%;
+    text-align: center;
+    margin :0 -10px;
+    margin-top: 30px;
+  }
+
+  .navbar_link {
+    display: none;
+    width: 100%;
+    margin-top: 35px;
+
+  }
+
+  .navbar_link li{
+    padding: 5px 11px;
+    padding-bottom: 0;
+    justify-content: space-between;
+  }
+
+  .navbar_btn {
+    height: 100%;
+    display: block;
+    position:absolute;
+    top: 15.5px;
+    right: 25px;
+    font-size: 30px;
+  }
+
+  .navbar_menu.active,
+  .navbar_link.active {
+    display: flex;
+    
+  }
+  .navbar.active {
+    background-color: rgba(17, 0, 51, 0.7);
+    z-index: 5;
+  }
+
+}

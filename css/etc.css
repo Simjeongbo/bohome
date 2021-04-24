@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Jua&display=swap');
+
+body {
+  min-height: 40cm;
+}
+
+.clock {
+  display: none;
+}
+
+video {
+  position:absolute;
+  top:150px;
+  left:50%;
+  transform:translateX(-50%);
+  width:60em;
+  box-shadow: 10px 10px 0 rgb(0,0,0,.5);
+}
+
+.accordion_1 {
+  position:absolute;
+  top:750px;
+  left:50%;
+  margin-left: -350px;
+  transform:translateX(-50%);
+  width:600px;
+  transition: all .1s;
+}
+
+.accordion_2 {
+  position:absolute;
+  top:750px;
+  left:50%;
+  margin-left: 350px;
+  transform:translateX(-50%);
+  width: 600px;
+  transition: all .1s;
+}
+
+input[id*="answer"] {
+  display:none;
+}
+input[id*="answer"] + label {
+  display:block;
+  padding:20px;
+  border-bottom:0;
+  border-radius: 5px;
+  color:#4D4D4D;
+  font-size: 25px;
+  font-weight:900;
+  background-color: rgba(255, 255, 255, 0.897);
+  cursor:pointer;
+  position:relative;
+}
+input[id*="answer"]:checked + label {
+  color:#dd3400;
+  transition: all .35s;
+}
+
+input[id*="answer"] + label + div {
+  max-height:0;
+  transition: all .35s;
+  overflow:hidden;
+  background:#444359;
+  text-align: center;
+  border-radius: 5px;
+  border: .5px solid rgba(0, 0, 0, 0.151);
+}
+input[id*="answer"] + label + div img {
+  width: 200px;
+}
+input[id*="answer"] + label + div p {
+  display:inline-block;
+}
+input[id*="answer"]:checked + label + div {
+  max-height:450px;
+}
+
+.accordion_1 div p{
+  color: rgb(255, 255, 255);
+  font-family: 'Cute Font', cursive;
+  font-size: 1.6em;
+  text-align: left;
+  width: 100%;
+  padding: 15px 30px;
+  border: .5px solid rgba(0, 0, 0, 0.151);
+}
+.accordion_2 div a p{
+  text-decoration: none;
+  color: rgb(194, 194, 194);
+  font-family: 'Cute Font', cursive;
+  font-size: 2.3em;
+  width: 100%;
+  padding: 10px 30px;
+  border: .5px solid rgba(0, 0, 0, 0.151);
+}
+.accordion_2 div a p:hover {
+  color: rgb(255, 255, 255);
+  background-color:#fa6335;
+  transition: all .35s;
+}
+
+
+
+@media screen and (max-width: 1650px) { 
+  body {
+    min-height:  55cm;
+  }
+  video {
+    width: 50em;
+    transition: all .35s;
+  }
+  .accordion_1{
+    left:50%;
+    top:650px;
+    width: 50em;
+    margin-left : 0;
+    transition: all .35s;
+    
+  }
+  .accordion_2{
+    left:50%;
+    top:1200px;
+    width: 50em;
+    margin-left : 0;
+    transition: all .35s;
+  }
+}
+
+@media screen and (max-width: 960px) { 
+  body {
+    min-height:  40cm;
+  }
+  video {
+    top: 100px;
+    width: 30em;
+  }
+  .accordion_1{
+    min-width: 0;
+    top:400px;
+    width: 30em;
+  }
+  .accordion_2{
+    min-width: 0;
+    top:870px;
+    width: 30em;
+  }
+  input[id*="answer"] + label{
+    font-size: 15px;
+    padding: 13px 20px;
+  }
+  .accordion_1 div p{
+    font-size: 1.3em;
+  }
+  .accordion_2 div a p{
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  body {
+    min-height:  36cm;
+  } 
+  video {
+    max-width: 30em;
+    width: 82vw;
+    min-height: 200px;
+    box-shadow: none;
+    transition: all 0.3s;
+  }
+  .accordion_1{
+    top:68vw;
+    max-width: 30em;
+    width: 82vw;
+    transition: all 0.3s;
+  }
+  
+  .accordion_2{
+    top:750px;
+    max-width: 30em;
+    width: 82vw;
+    transition: all 0.3s;
+  }
+  input[id*="answer"] + label{
+    font-size: 15px;
+    padding: 13px 20px;
+    
+  }
+  .accordion_1 div p{
+    font-size: 0.9em;
+    transition: all 0.3s;
+  }
+  .accordion_2 div a p{
+    font-size: 1.9em;
+  }
+}
+
+
+
+@media screen and (max-width: 500px){
+  .accordion_1{
+    top:340px;
+  }
+  .accordion_2{
+    top:730px;
+    max-width: 30em;
+    width: 82vw;
+
+  }
+  .accordion_1 div p{
+    padding: 15px 15px;;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  video {
+    max-width: 30em;
+    width: 81.7%;
+  }
+
+  .accordion_2{
+    top:830px;
+    
+  }
+}
+
+
+@media screen and (max-width: 1100px){
+  .clock {
+    display:block;
+    position: absolute;
+    z-index: 15;
+    font-size: 2em;
+    top: 15.9px;
+    right: 80px;
+    width: 100%;
+    text-align: right;
+    font-family: 'Black Han Sans', sans-serif;    
+    color: aliceblue;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .clock{
+    display: none;
+  }
+}

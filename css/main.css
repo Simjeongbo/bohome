@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap');
+
+body {
+  height: 100vh;
+  
+}
+
+
+.main {
+  height: 100vh;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.main-demo  {
+  width: 23ch;
+  animation: typing 2s steps(23), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 5vw;
+  font-family: 'Black Han Sans', sans-serif;
+  color: aliceblue;
+}
+
+.main-demo_1{
+  position: absolute;
+  width: 53.2ch;
+  margin-top: 52vh;
+  animation: typing 3s steps(33), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 1.6vw;
+  font-family: 'Nanum Gothic Coding', monospace;
+  color: aliceblue;
+  top: 50px;
+}
+
+.clock {
+  position: absolute;
+  font-size: 11vh;
+  font-family: 'Black Han Sans', sans-serif;
+  color: aliceblue;
+  width: 100%;
+  text-align: center;
+  top: 30%;
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    height: 100vh;
+    min-height: 33cm;
+    transition: all .01s;
+  }
+
+  .main {
+    align-items:flex-start;
+    justify-content:center;
+  }
+  .main-demo{
+    animation: none;
+    margin-top: 3cm;
+  }
+  .main-demo_1{
+    display: none;
+  }
+  .main-demo span {
+      align-items: left ;
+      left: 1em;
+      position: absolute;
+      font-size: 14.5vw;
+      white-space: nowrap;
+      overflow: hidden;
+  }
+
+  .main-demo span:nth-child(1) {
+    width: 4.3ch;
+    animation:  typing .3s steps(3), blink .3s step-end infinite alternate;
+    border-right: 3px solid;
+
+  }
+  .main-demo span:nth-child(2) {
+    margin-top: 25vw;
+    width: 5.8ch;
+    
+    animation:typing .8s steps(4), blink .3s step-end infinite alternate;
+    border-right: 3px solid;
+ 
+  }
+
+  .main-demo span:nth-child(3) {
+    margin-top: 50vw;
+    width: 4.3ch;
+    animation: typing .3s steps(3), blink .3s step-end infinite alternate;
+    border-right: 3px solid;
+
+  }
+  .main-demo span:nth-child(4) {
+    margin-top: 75vw;
+    width: 7.5ch;
+    animation: typing .9s steps(5), blink .3s step-end infinite alternate;
+    border-right: 3px solid;
+
+
+  }
+
+  .clock {
+    z-index: 15;
+    font-size: 2em;
+    top: 15.9px;
+    right: 80px;
+    width: 100%;
+    text-align: right;
+  }
+}
+
+
+
+@media screen and (max-width: 500px) and (max-height: 800px){
+  body {
+    height: 100vh;
+    min-height: 18cm;
+    transition: all .1s;
+  }
+}
+
+
+
+
+@media screen and (max-width: 420px) {
+  .clock{
+    display: none;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+    
+  }
+
+}
+
