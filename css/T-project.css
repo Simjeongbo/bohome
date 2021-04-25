@@ -310,10 +310,10 @@ a #T-project::after {
   .cards > ul > li > a .card::after {
     background:rgba(0,0,0, 0.4);
   }
-  br:nth-child(1) {
+  .bottom br:nth-child(1) {
     display: flex;
   } 
-  br:nth-child(2) {
+  .bottom br:nth-child(2) {
     display: none;
   } 
   .T_name{
@@ -344,13 +344,14 @@ a #T-project::after {
     transition:all .5s; 
   }
   
-  h2 br {
+  h2 span br{
     display :flex;
   }
   
   .title {
     font-size: 45px;
     color: rgb(255, 115, 0);
+    margin-right: 0;
   }
   .plan {
     font-size: 20px;
@@ -373,11 +374,15 @@ a #T-project::after {
   }
   h2 span {
     font-size: 18px;
-
   }
-
-
 }
+
+@media screen and (max-width: 800px){
+  .plan br {
+    display: flex;
+  }
+}
+
 @media screen and (max-width: 600px){
   body {
     min-height: 49cm;
@@ -393,16 +398,27 @@ a #T-project::after {
     font-size: 25px;
   }
 }
+@media screen and (max-width: 510px){
+  #T-project {
+    height: 10.5cm;
+  }
+}
 @media screen and (max-width: 410px){
   body {
     min-height: 34cm;
     transition:all .35s;
   }
   #T-project {
-    height: 10cm;
+    height: 8.5cm;
   }
   p {
     font-size: 15px;
+  }
+  .plan{
+    font-size: 60%;
+  }
+  .T_name{
+    padding : 10px 0;
   }
 }
 

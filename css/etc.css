@@ -219,8 +219,23 @@ input[id*="answer"]:checked + label + div {
   }
 
   .accordion_2{
-    top:830px;
+    top:730px;
     
+  }
+}
+@media screen and (max-width: 370px) {
+  .accordion_2{
+    top:770px;
+  }
+}
+@media screen and (max-width: 312px) {
+  .accordion_2{
+    top:790px;
+  }
+}
+@media screen and (max-width: 274px) {
+  .accordion_2{
+    top:820px;
   }
 }
 

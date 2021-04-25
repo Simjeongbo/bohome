@@ -18,7 +18,7 @@ nav a {
 
 .navbar {
   z-index: 11;
-  position: absolute;
+  position: fixed;
   width: 100%;
   font-family: 'Gugi', cursive;
   display: flex;

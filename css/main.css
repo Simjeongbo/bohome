@@ -140,7 +140,7 @@ body {
   from {
     width: 0;
   }
-}
+} 
 
 @keyframes blink {
   50% {
@@ -150,3 +150,8 @@ body {
 
 }
 
+@media screen and (max-width: 320px){
+ body {
+  min-height: 625px;
+ }
+}
