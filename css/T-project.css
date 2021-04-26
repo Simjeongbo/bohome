@@ -84,7 +84,9 @@ h2 br {
   font-size: 40px;
   margin-top: 0;
   font-family: 'Noto Sans KR', sans-serif;
-  
+}
+.top span{
+  font-size: 30px;
 }
 .cards {
   position:absolute;
@@ -114,6 +116,7 @@ h2 br {
   font-family: 'Cute Font', cursive;
   transition:all .35s;
 }
+
 .cards > ul > li > a .card .top_1 {
   position:absolute;
   text-align: center;
@@ -331,7 +334,6 @@ a #T-project::after {
     text-align: center;
     transition:all .35s; 
   }
-
   p span {
     margin :0;
     padding: 0 5%;
@@ -343,11 +345,12 @@ a #T-project::after {
     text-align: center;
     transition:all .5s; 
   }
-  
   h2 span br{
     display :flex;
   }
-  
+  .top span{
+    font-size: 5vw;
+  }
   .title {
     font-size: 45px;
     color: rgb(255, 115, 0);
